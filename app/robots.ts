@@ -4,6 +4,6 @@ export default function robots() {
             userAgent: '*',
             allow: '/',
         },
-        sitemap: 'https://yoursite.com/sitemap.xml',
+        sitemap: 'https://mitra-kaltim-company-profile.vercel.app//sitemap.xml',
     };
 }
