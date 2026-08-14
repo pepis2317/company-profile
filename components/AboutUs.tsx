@@ -50,7 +50,7 @@ const AboutUs: React.FC = () => {
                             </span>
                         </a>
                         <p className='font-sans text-lg font-light mt-8'>
-                            CV.Mitra Kaltim dan Tikil Motor merupakan perusahaan grosir dan distribusi sparepart yang berbasis di Samarinda, Kalimantan Timur.
+                            Tikil Motor & CV.Mitra Kaltim merupakan perusahaan grosir dan distribusi sparepart yang berbasis di Samarinda, Kalimantan Timur.
                             Berpengalaman sejak 2012, kami berkomitmen untuk menyediakan layanan distribusi yang profesional dan unggul.
                         </p>
                     </div>
