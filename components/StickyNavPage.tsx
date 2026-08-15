@@ -8,6 +8,7 @@ import Gallery from "./Gallery";
 import Reach from "./Reach";
 import Testimonials from "./Testimonials";
 import { Menu, X } from "lucide-react";
+import { useRouter } from 'next/navigation'
 
 const SECTIONS = ["home", "about", "gallery", "reach", "testimonials", "contact"] as const;
 type SectionKey = (typeof SECTIONS)[number];
@@ -33,6 +34,7 @@ export default function StickyNavPage() {
         setIsOpen(false); // close menu after selecting on mobile
     };
 
+    const router = useRouter()
     return (
         <div className="relative">
             <nav className="fixed w-full top-0 z-50 bg-gray-800 shadow">
@@ -49,7 +51,7 @@ export default function StickyNavPage() {
                                 </button>
                             ))}
                         </div>
- 
+
                         {/* Burger button (mobile only) */}
                         <button
                             onClick={() => setIsOpen(!isOpen)}
@@ -80,10 +82,9 @@ export default function StickyNavPage() {
                     </div>
                 </div>
             </nav>
-            <a
-                href="https://wa.me/628164512317"
-                target="_blank"
-                rel="noopener noreferrer"
+            <button
+                type="button"
+                onClick={()=>router.push('/whatsapp-redirect')}
                 className="w-20 h-20 hover:-translate-y-1 hover:cursor-pointer transition-all duration-200 rounded-full border border-gray-600 fixed bg-gray-700 shadow bottom-10 right-10 z-50 flex items-center justify-center"
             >
                 <Image
@@ -93,7 +94,7 @@ export default function StickyNavPage() {
                     width={500}
                     height={500}
                 />
-            </a>
+            </button>
 
             <section ref={setSectionRef("home")} className="mt-10">
                 <Header onLearnMore={() => scrollToSection("about")} onContact={() => scrollToSection("contact")} />
