@@ -1,6 +1,7 @@
 import StickyNavPage from "@/components/StickyNavPage";
 import { Metadata } from "next";
-export const metadata:Metadata = {
+import Script from 'next/script'
+export const metadata: Metadata = {
     title: "Sparepart Motor Samarinda | Distributor & Grosir Kaltim-Kaltara",
     description: "Distributor & grosir sparepart motor terpercaya di Samarinda sejak 2012. Melayani Balikpapan, Tenggarong, Bontang & seluruh Kaltim-Kaltara. Stok lengkap, kirim cepat.",
 };
@@ -24,6 +25,18 @@ export default function Home() {
                     })
                 }}
             />
+            <Script
+                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+                strategy="afterInteractive"
+            />
+            <Script id="ga-init" strategy="afterInteractive">
+                {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+                `}
+            </Script>
             <StickyNavPage />
         </>
     );
