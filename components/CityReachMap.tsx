@@ -3,6 +3,7 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
+import { env } from 'process';
 
 const cities = [
     { name: 'Samarinda', lat: -0.5022, lng: 117.1536 },
@@ -42,7 +43,7 @@ export default function CityReachMap() {
                 style={{ height: '500px', width: '100%', borderRadius: '16px' }}
             >
                 <TileLayer
-                    url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+                    url={`https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=${process.env.NEXT_PUBLIC_MAP_KEY}`}
                     attribution='&copy; OpenStreetMap &copy; CARTO'
                 />
                 {cities.map((city) => (

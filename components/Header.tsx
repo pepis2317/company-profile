@@ -41,11 +41,11 @@ const Header: React.FC<HeaderProps> = ({ onLearnMore, onContact }) => {
                 Solusi sparepart otomotif terpercaya area Kaltim - Kaltara. Jangkauan
             </h1>
             <div className="relative bg-gray-900 h-screen overflow-x-clip">
-                <div className="absolute -top-40 -left-50 h-100 w-150 rounded-full bg-linear-to-br from-blue-500 via-indigo-500 to-cyan-500 opacity-25 blur-3xl animate-blob animation-delay-2000 lg:scale-150" />
-                <div className="absolute top-16 -right-32 h-96 w-150 rounded-full bg-linear-to-br from-cyan-500 via-indigo-500 to-blue-500 opacity-25 blur-3xl animate-blob animation-delay-2000 lg:scale-150" />
-                <div className="absolute top-64 -left-20 h-96 w-96 rounded-full bg-linear-to-br from-indigo-500 via-cyan-500 to-blue-500 opacity-25 blur-3xl animate-blob animation-delay-4000 " />
+                <div className="absolute -top-40 -left-50 h-100 w-150 rounded-full bg-linear-to-br from-cyan-500 via-indigo-500 to-blue-500 opacity-25 blur-3xl lg:scale-150" />
+                <div className="absolute top-16 -right-32 h-96 w-150 rounded-full bg-linear-to-br from-cyan-500 via-indigo-500 to-blue-500 opacity-25 blur-3xl lg:scale-150" />
+                <div className="absolute top-64 -left-20 h-96 w-96 rounded-full bg-linear-to-br from-cyan-500 via-indigo-500 to-blue-500 opacity-25 blur-3xl lg:scale-150" />
 
-                <Bike className="w-450 aspect-square absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-270 opacity-50" />
+                380783<Bike className="w-450 aspect-square absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-270 opacity-80" />
                 <div className='z-10'>
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-sans" >
                         <div className="flex">
