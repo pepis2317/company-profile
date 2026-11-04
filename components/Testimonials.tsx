@@ -15,30 +15,13 @@ const Testimonials: React.FC = () => {
     const [reviews, setReviews] = useState<Review[]>([]);
     const [loading, setLoading] = useState(true);
 
-    async function getTopReviews(placeId: string, apiKey: string|undefined) {
-        if(!apiKey)return
-        const res = await fetch(
-            `https://places.googleapis.com/v1/places/${placeId}`,
-            {
-                headers: {
-                    "X-Goog-Api-Key": apiKey,
-                    "X-Goog-FieldMask": "reviews"
-                }
-            }
-        );
-        const data = await res.json();
-        if (data.error) {
-            console.error(data.error);
-            return [];
-        }
-        return (data.reviews || []).slice(0, 4);
-    }
-
     useEffect(() => {
-        getTopReviews('ChIJa2anIlV_9i0RPgNwuEdfKkI', process.env.NEXT_PUBLIC_GOOGLE_PLACES_API_KEY)
+        fetch('/api/reviews')
+            .then((r) => r.json())
             .then(setReviews)
             .finally(() => setLoading(false));
     }, []);
+
 
     return (
         <div className='p-10 px-10 xl:px-20 z-10 relative overflow-x-clip w-full'>
