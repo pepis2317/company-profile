@@ -43,7 +43,7 @@ export default function CityReachMap() {
                 style={{ height: '500px', width: '100%', borderRadius: '16px' }}
             >
                 <TileLayer
-                    url={`https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=${process.env.NEXT_PUBLIC_MAP_KEY}`}
+                    url={`https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png?key=cb1_51pc_1_437f7282eebaf59e0ec923b2`}
                     attribution='&copy; OpenStreetMap &copy; CARTO'
                 />
                 {cities.map((city) => (
